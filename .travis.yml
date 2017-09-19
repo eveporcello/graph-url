@@ -1,0 +1,8 @@
+deploy:
+  provider: npm
+  email: eve@moonhighway.com
+  api_key:
+    secure: xthPEE/I1UsrU6u/z2Tr0i3IqqUtC+sn5HIvV5HIzJBSAwYTjgRqTU7n2HaB6dq8AeLi4CmMuVG5qFHEBwtzKp6QBDqyDv+M1XzLinAtIBTlWyvqvI0svRW/SY7CzpVo86b6orh1dHuwpbfDgd4w0oMFxvR/MY1mfWSLJNkKP1z/l+lmd2orag3/4TftQLWE2APPKXZ+DEqmA5Yl8rRHYmtTbk6887Dauh2CcxlhPAJxdI5tZlyfif8Kab78oXSjpWGmOYN5TurCcO/N2kOk6QnWOnVhazzxlR+xWY+/CipEzV89L7QpPCTkT/VG01YktzmvsorVjjEYTdSSRIcJJMr6OC3B50fWfwdME6xroJJZOLn+olTDAWgs4t5+VBzQsrd9cTE23cs7Tg1Vg9NuztLruhXrm0ChND8aD4NHdFvq1htl2jEeFXy/0WKQ0rg/oojGof52VzNzZCmw1BCJQwwTYgiikBYQsurNnRVjPIfKU9qf70LOdwbrdV6Wjp1l/MsfCjipjmoo23HY6FaGiE0zpyN3T3pzAQ9fs+4VzsVPJNUmcWALrnGJy/FUe69dWLEi8MTGI0bN11Jqr5JTaSb6Ir9n1QU2zd5uWm2nH/khjPty4WMZwKTNNHur5nMfrL+s44rTLE+FCODdF/Gg0k6LEt8qtv0URb07r0J4bSk=
+  on:
+    tags: true
+    repo: eveporcello/graph-url
