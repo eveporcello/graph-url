@@ -1,0 +1,39 @@
+{
+  "name": "graph-url",
+  "version": "0.0.1",
+  "description": "A GraphQL library for building queries in the terminal",
+  "main": "index.js",
+  "repository": "https://github.com/eveporcello/graph-url.git",
+  "author": "Eve Porcello",
+  "license": "MIT",
+  "bin": {
+    "gurl": "index.js",
+    "graph-url": "index.js"
+  },
+  "scripts": {
+    "pretest": "yarn build",
+    "test": "jest && cucumber-js",
+    "prebdd": "clear; webpack --progress",
+    "tdd": "jest --watch -t\"@current\"",
+    "bdd": "cucumber-js --tags @current",
+    "build": "webpack -p"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "minimist": "^1.2.0",
+    "node-fetch": "^1.7.3"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "cucumber": "^3.0.2",
+    "jest": "^21.1.0",
+    "webpack": "^3.5.6",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
