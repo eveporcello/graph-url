@@ -15,7 +15,7 @@ Scenario: A Successful Query
   When I run gurl with the following arguments:
       | flag  | value                                |
       | -u    | https://www.moonhighway.com/graphiql |
-      | -q    | sample-query.txt                     |
+      | -f    | sample-query.txt                     |
   Then I should see the following results in the terminal:
       """
       {
@@ -73,7 +73,7 @@ Given the query file "sample-query.txt":
 When I run gurl with the following arguments:
     | flag     | value                                |
     | --url    | https://www.moonhighway.com/graphiql |
-    | --query  | sample-query.txt                     |
+    | --file   | sample-query.txt                     |
 Then I should see the following results in the terminal:
     """
     {
@@ -126,7 +126,7 @@ Scenario: Query Not Provided
     """
 
       Error: A graph query file was not provided.
-        Please provide a query file with -q or --query.
+        Please provide a query file with -f or --file.
 
     """
   And the application should exit with an error.
@@ -135,7 +135,7 @@ Scenario: File Not Found
   When I run gurl with the following arguments:
     | flag  | value                                |
     | -u    | https://www.moonhighway.com/graphiql |
-    | -q    | file-not-there.txt                   |
+    | -f    | file-not-there.txt                   |
   Then I should see the following results in the terminal:
     """
 
@@ -156,7 +156,7 @@ Given the query file "sample-query.txt":
   """
 When I run gurl with the following arguments:
   | flag  | value            |
-  | -q    | sample-query.txt |
+  | -f    | sample-query.txt |
 Then I should see the following results in the terminal:
   """
 
@@ -178,7 +178,7 @@ Scenario: URL Not a Graph Endpoint
   When I run gurl with the following arguments:
     | flag  | value                       |
     | -u    | https://www.moonhighway.com |
-    | -q    | sample-query.txt            |
+    | -f    | sample-query.txt            |
   Then I should see the following results in the terminal:
     """
 
@@ -198,7 +198,7 @@ Scenario: Graph Errors
   When I run gurl with the following arguments:
     | flag  | value                                |
     | -u    | https://www.moonhighway.com/graphiql |
-    | -q    | sample-query.txt                     |
+    | -f    | sample-query.txt                     |
   Then I should see the following results in the terminal:
     """
 

@@ -12,14 +12,7 @@ import {
 const readFile = Promise.promisify(fs.readFile)
 const argv = minimist(process.argv.slice(2))
 const graphEndpoint = argv.u || argv.url
-const queryFileName = argv.q || argv.query
-
-if (!queryFileName) {
-  errorExit(
-    'A graph query file was not provided.',
-    'Please provide a query file with -q or --query.'
-  )
-}
+const queryFileName = argv.f || argv.file
 
 if (!graphEndpoint) {
   errorExit(
@@ -28,8 +21,15 @@ if (!graphEndpoint) {
   )
 }
 
+if (!queryFileName) {
+  errorExit(
+    'A graph query file was not provided.',
+    'Please provide a query file with -f or --file.'
+  )
+}
+
 readFile(queryFileName, "UTF-8")
-  .then(query => fetch(`${graphEndpoint}?query=${query}`))
+  .then(q => fetch(`${graphEndpoint}?query=${q}`))
   .then(checkJSONHeader)
   .then(res => res.json())
   .then(checkGraphQLError)
