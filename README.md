@@ -1,7 +1,17 @@
-Gurl
-===
+Graph URL
+======
+Run GraphQL queries right from the terminal.
 
-A tool for building GraphQL queries in the terminal.
-
-Under Construction
+Installation
 --------
+Install it once globally with yarn:
+
+```
+yarn global add graph-url
+```
+
+Or use npm:
+
+```
+npm install -g graph-url
+```
