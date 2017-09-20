@@ -1,6 +1,6 @@
 {
   "name": "graph-url",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A GraphQL library for building queries in the terminal",
   "main": "index.js",
   "repository": "https://github.com/eveporcello/graph-url.git",
