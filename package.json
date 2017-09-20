@@ -11,7 +11,6 @@
     "graph-url": "index.js"
   },
   "scripts": {
-    "prepublish": "yarn build",
     "pretest": "yarn build",
     "test": "jest && cucumber-js",
     "prebdd": "clear; webpack --progress",
