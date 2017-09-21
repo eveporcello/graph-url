@@ -12,7 +12,7 @@ import {
 const readFile = Promise.promisify(fs.readFile)
 const argv = minimist(process.argv.slice(2))
 const graphEndpoint = argv.u || argv.url
-const queryFileName = argv.f || argv.file
+const queryFileName = argv.f || argv.fileName || argv.file
 
 if (!graphEndpoint) {
   errorExit(
